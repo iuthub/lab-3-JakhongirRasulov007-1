@@ -1,0 +1,82 @@
+:root {
+  --padding: 1rem;
+  --background-section-color: rgb(58, 236, 58);
+  --border-radius: 1rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "heading heading heading heading"
+    "friends spatulas spatulas spatulas"
+    ". cookie cookie cookie";
+  grid-row-gap: 5rem;
+}
+
+.heading {
+  grid-area: heading;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--background-section-color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  transition: all 1s;
+}
+.heading:hover {
+  justify-content: center;
+}
+.heading-text {
+  margin-right: 5vw;
+  cursor: pointer;
+}
+
+.friends {
+  grid-area: friends;
+  background-color: var(--background-section-color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+
+.spatulas {
+  grid-area: spatulas;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--background-section-color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+
+#spatulas-text {
+  width: 80%;
+}
+
+#spatulas-date {
+  text-decoration: underline dashed;
+}
+
+.cookie {
+  grid-area: cookie;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--background-section-color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+
+.cookie-text {
+  width: 60%;
+}
+
+.img-hoverable {
+  border-radius: var(--border-radius);
+  transition: all 0.4s;
+}
+.img-hoverable:hover {
+  transform: scale(1.1);
+}
